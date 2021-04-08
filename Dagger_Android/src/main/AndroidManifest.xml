@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.dagger_android">
+
+    <application
+        android:name=".AppApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Dagger_Android"
+        android:theme="@style/Theme.AppCompat.Light">
+        <activity android:name=".FirstActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".fragment.ThirdActivity"/>
+    </application>
+
+</manifest>

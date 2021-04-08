@@ -1,0 +1,4 @@
+include ':Hilt'
+include ':Dagger_Android'
+include ':Dagger'
+rootProject.name = "DraggerDemo"
