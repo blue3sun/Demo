@@ -55,23 +55,23 @@ public class SecondActivity extends AppCompatActivity {
         mViewBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mViewBinding.getRoot());
         DaggerSubjectComponent.builder().studentComponent(DaggerStudentComponent.create()).build().inject(this);
-        mViewBinding.tv1.setText(mSubject.toString());
+        mViewBinding.tv1.setText("mSubject:"+mSubject.toString());
         mStudent1 = DaggerStudentComponent.create().getStudent();
         mStudent3 = DaggerStudentComponent.create().getStudent();
-        mViewBinding.tv1.append("\n" +mStudent1.toString());
-        mViewBinding.tv1.append("\n" + mStudent3.toString());
+        mViewBinding.tv1.append("\n mStudent1:" +mStudent1.toString());
+        mViewBinding.tv1.append("\n mStudent3:" + mStudent3.toString());
         mViewBinding.tv1.append("\n===================");
-        mViewBinding.tv1.append("\n" + mStudent1.toString());
-        mViewBinding.tv1.append("\n" + mStudent3.toString());
-        mViewBinding.tv1.append("\n" + mStudent2.toString());
+        mViewBinding.tv1.append("\n mStudent1:" + mStudent1.toString());
+        mViewBinding.tv1.append("\n mStudent2:" + mStudent2.toString());
+        mViewBinding.tv1.append("\n mStudent3:" + mStudent3.toString());
 
         mStudent1 = DaggerStudentComponent.builder().studentModule(new StudentModule()).build().getStudent();
-        mViewBinding.tv1.append("\n" + mStudent1.toString());
+        mViewBinding.tv1.append("\n mStudent1:" + mStudent1.toString());
 
         DaggerSubjectComponent.builder().studentComponent(DaggerStudentComponent.create()).build().addSub().getBasicSubject();
         DaggerSubjectComponent.builder().studentComponent(DaggerStudentComponent.create()).build().getComplexSubjectComponent().build().getComplexSubject();
 
-        mViewBinding.tv1.append("\n" + mBasicSubject.toString());
-        mViewBinding.tv1.append("\n" + mComplexSubject.toString());
+        mViewBinding.tv1.append("\n mBasicSubject:" + mBasicSubject.toString());
+        mViewBinding.tv1.append("\n mComplexSubject:" + mComplexSubject.toString());
     }
 }

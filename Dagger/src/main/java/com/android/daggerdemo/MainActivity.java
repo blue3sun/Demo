@@ -44,16 +44,16 @@ public class MainActivity extends AppCompatActivity {
         initView();
         mStudent1 = DaggerStudentComponent.create().getStudent();
         mStudent3 = DaggerStudentComponent.create().getStudent();
-        mViewBinding.tv1.setText(mStudent1.toString());
-        mViewBinding.tv1.append("\n" + mStudent3.toString());
+        mViewBinding.tv1.setText("mStudent1:"+mStudent1.toString());
+        mViewBinding.tv1.append("\n mStudent3:" + mStudent3.toString());
         mViewBinding.tv1.append("\n===================");
         DaggerStudentComponent.create().inject(this);
-        mViewBinding.tv1.append("\n" + mStudent1.toString());
-        mViewBinding.tv1.append("\n" + mStudent3.toString());
-        mViewBinding.tv1.append("\n" + mStudent2.toString());
+        mViewBinding.tv1.append("\n mStudent1:" + mStudent1.toString());
+        mViewBinding.tv1.append("\n mStudent2:" + mStudent2.toString());
+        mViewBinding.tv1.append("\n mStudent3:" + mStudent3.toString());
 
         mStudent1 = DaggerStudentComponent.builder().studentModule(new StudentModule()).build().getStudent();
-        mViewBinding.tv1.append("\n" + mStudent1.toString());
+        mViewBinding.tv1.append("\n mStudent1" + mStudent1.toString());
 
     }
 
