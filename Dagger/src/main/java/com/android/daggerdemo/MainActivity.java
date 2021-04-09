@@ -6,13 +6,10 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.daggerdemo.dagger.Grade;
-import com.android.daggerdemo.dagger.Student;
-import com.android.daggerdemo.dagger.component.DaggerStudentComponent;
-import com.android.daggerdemo.dagger.module.StudentModule;
-import com.android.daggerdemo.dagger.qualifier.DevQualifier;
-import com.android.daggerdemo.dagger.qualifier.TestQualifier;
 import com.android.daggerdemo.databinding.ActivityMainBinding;
+import com.android.daggerdemo.module.StudentModule;
+import com.android.daggerdemo.qualifier.DevQualifier;
+import com.android.daggerdemo.qualifier.TestQualifier;
 
 import javax.inject.Inject;
 
