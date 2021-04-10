@@ -8,7 +8,6 @@ import dagger.Component;
 
 @Component(dependencies = {SubjectComponent.class})
 public interface SchoolComponent {
-
     School getSchool();
 
     void inject(SecondActivity secondActivity);

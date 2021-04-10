@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         mViewBinding.btn1.setVisibility(View.VISIBLE);
         mViewBinding.btn2.setVisibility(View.VISIBLE);
         mViewBinding.btn3.setVisibility(View.VISIBLE);
+        mViewBinding.btn4.setVisibility(View.VISIBLE);
         mViewBinding.btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mViewBinding.btn3.setOnClickListener(new View.OnClickListener() {
+        mViewBinding.btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, FourthActivity.class);
+                Intent intent = new Intent(MainActivity.this, FifthActivity.class);
                 startActivity(intent);
             }
         });

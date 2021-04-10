@@ -43,5 +43,14 @@
         app:layout_constraintTop_toBottomOf="@id/btn2"
         android:visibility="gone"
         android:text="打开第四个页面"/>
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn3"
+        android:visibility="gone"
+        android:text="打开第五个页面"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
