@@ -1,4 +1,4 @@
-package com.android.hilt.Fragment
+package com.android.hilt.fragment
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -14,7 +14,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity"/>
-        <activity android:name=".Fragment.ThirdActivity"/>
+        <activity android:name=".fragment.ThirdActivity"/>
     </application>
 
 </manifest>

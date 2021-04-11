@@ -5,22 +5,23 @@ import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Named
+import javax.inject.Singleton
 
 @Module
-@InstallIn(ApplicationComponent::class)
+@InstallIn(SingletonComponent::class)
 class StorageModule2 {
-//    @Named("SpStorage")
-//    @Provides
-//    fun bindSpStorage(spStorage: SpStorage):IStorage{
-//        return SpStorage()
-//    }
-//
-//    @Named("DbStorage")
-//    @Provides
-//    fun bindDbStorage(dbStorage: DbStorage):IStorage{
-//        return DbStorage()
-//    }
+    @Singleton
+    @Named("SpStorage")
+    @Provides
+    fun bindSpStorage(spStorage: SpStorage):IStorage{
+        return SpStorage()
+    }
+
+    @Named("DbStorage")
+    @Provides
+    fun bindDbStorage(dbStorage: DbStorage):IStorage{
+        return DbStorage()
+    }
 }

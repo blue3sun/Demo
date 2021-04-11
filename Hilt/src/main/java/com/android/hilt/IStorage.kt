@@ -1,6 +1,6 @@
 package com.android.hilt
 
-public interface IStorage {
+interface IStorage {
     fun save()
     fun get(key:String):String
 }

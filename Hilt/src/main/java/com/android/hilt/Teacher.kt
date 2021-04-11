@@ -2,7 +2,7 @@ package com.android.hilt
 
 import javax.inject.Inject
 
-public class Teacher @Inject constructor(var student1: Student) {
+class Teacher @Inject constructor(var student1: Student) {
     @Inject
     lateinit var student2: Student
     var name: String? = ""

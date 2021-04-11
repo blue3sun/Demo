@@ -1,5 +1,7 @@
-package com.android.hilt.Fragment
+package com.android.hilt.fragment
 
+import android.app.Application
+import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -33,14 +35,21 @@ class FragmentA : Fragment() {
 
     @Named("SpStorage")
     @Inject
-    lateinit var mStorage3: IStorage
+    lateinit var mStorage2: IStorage
 
     @Named("DbStorage")
     @Inject
-    lateinit var mStorage2: IStorage
+    lateinit var mStorage3: IStorage
+
+    @Inject
+    lateinit var mDialog: Dialog
+
+    @Inject
+    lateinit var mApplicationContext: Application
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         mViewBinding = FragmentABinding.inflate(layoutInflater, container, false)
+        initView()
         return mViewBinding?.root
     }
 
@@ -71,11 +80,26 @@ class FragmentA : Fragment() {
 
         mViewBinding?.tvInfo1?.append("\n------------")
         mViewBinding?.tvInfo1?.append("\nmStorage3:$mStorage3")
+
+
+        mViewBinding?.tvInfo1?.append("\n------------")
+        mViewBinding?.tvInfo1?.append("\nmDialog:$mDialog")
+
+        mViewBinding?.tvInfo1?.append("\n------------")
+        mViewBinding?.tvInfo1?.append("\nmApplicationContext:$mApplicationContext")
+
+        mViewBinding?.tvInfo1?.append("\napplication==mApplicationContext:"+(requireActivity().application==mApplicationContext))
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         mViewBinding = null
+    }
+
+    private fun initView() {
+        mViewBinding?.btn1?.setOnClickListener {
+            mDialog.show()
+        }
     }
 
 }

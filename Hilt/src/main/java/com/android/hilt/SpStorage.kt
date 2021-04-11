@@ -5,7 +5,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 
-public class SpStorage @Inject constructor(): IStorage {
+class SpStorage @Inject constructor() : IStorage {
     override fun save() {
         Log.i("Hilt", "SpStorage save()")
     }
