@@ -63,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        mViewBinding.btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FourthActivity.class);
+                startActivity(intent);
+            }
+        });
         mViewBinding.btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
