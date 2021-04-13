@@ -1,13 +1,14 @@
-package com.android.hilt
+package com.android.hilt.ui
 
 import android.app.Application
 import android.app.Dialog
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.android.hilt.fragment.ThirdActivity
+import com.android.hilt.IStorage
+import com.android.hilt.Student
+import com.android.hilt.Teacher
 import com.android.hilt.databinding.ActivityFirstBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject

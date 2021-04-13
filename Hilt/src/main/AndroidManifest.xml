@@ -7,14 +7,14 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Hilt_Demo"
         android:theme="@style/Theme.AppCompat.Light">
-        <activity android:name=".FirstActivity">
+        <activity android:name=".ui.FirstActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"/>
-        <activity android:name=".fragment.ThirdActivity"/>
+        <activity android:name=".ui.SecondActivity"/>
+        <activity android:name=".ui.ThirdActivity"/>
     </application>
 
 </manifest>

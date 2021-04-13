@@ -1,4 +1,4 @@
-package com.android.hilt.fragment
+package com.android.hilt.ui
 
 import android.app.Application
 import android.app.Dialog
